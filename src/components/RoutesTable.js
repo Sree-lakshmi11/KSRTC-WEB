@@ -3,21 +3,23 @@ import './RoutesTable.css';
 
 const RoutesTable = () => {
   const [routes] = useState([
-    { id: 1, departureTime: '03:40:00', departurePlace: 'PSL', route: 'NH', arrivalPlace: 'KLKV', arrivalTime: '03:45:00', km: 3.5, terminalGap: '00:05:00' },
-    { id: 2, departureTime: '07:55:00', departurePlace: 'PSL', route: 'NH', arrivalPlace: 'KLKV', arrivalTime: '08:05:00', km: 3.5, terminalGap: '00:10:00' },
-    { id: 3, departureTime: '06:40:00', departurePlace: 'PSL', route: 'NH', arrivalPlace: 'KLKV', arrivalTime: '06:50:00', km: 3.5, terminalGap: '00:10:00' },
-    { id: 4, departureTime: '04:30:00', departurePlace: 'PSL', route: 'NH', arrivalPlace: 'KLKV', arrivalTime: '04:40:00', km: 3.5, terminalGap: '00:10:00' },
-    { id: 5, departureTime: '12:45:00', departurePlace: 'PSL', route: 'NH', arrivalPlace: 'KLKV', arrivalTime: '12:55:00', km: 3.5, terminalGap: '00:10:00' },
-    { id: 6, departureTime: '05:05:00', departurePlace: 'PSL', route: 'NH', arrivalPlace: 'KLKV', arrivalTime: '05:15:00', km: 3.5, terminalGap: '00:10:00' },
-    { id: 7, departureTime: '05:15:00', departurePlace: 'PSL', route: 'NH', arrivalPlace: 'KLKV', arrivalTime: '05:25:00', km: 3.5, terminalGap: '00:10:00' },
-    { id: 8, departureTime: '05:20:00', departurePlace: 'PSL', route: 'NH', arrivalPlace: 'KLKV', arrivalTime: '06:40:00', km: 3.5, terminalGap: '00:10:00' },
+    { id: 1, departureTime: '03:40', departurePlace: 'PSL', route: 'NH', arrivalPlace: 'KLKV', arrivalTime: '03:45', km: 3.5, terminalGap: '00:05' },
+    { id: 2, departureTime: '03:50', departurePlace: 'KLKV', route: 'NH', arrivalPlace: 'TVM', arrivalTime: '04:55', km: 33.7, terminalGap: '00:10' },
+    { id: 3, departureTime: '05:05', departurePlace: 'TVM', route: 'NH-UDA', arrivalPlace: 'KNVLA', arrivalTime: '06:05', km: 32.0, terminalGap: '00:30' },
+    { id: 4, departureTime: '06:35', departurePlace: 'KNVLA', route: 'UDA-NH', arrivalPlace: 'MC', arrivalTime: '08:05', km: 38.0, terminalGap: '00:10' },
+    { id: 5, departureTime: '08:15', departurePlace: 'MC', route: 'NH', arrivalPlace: 'KLKV', arrivalTime: '09:50', km: 40.0, terminalGap: '00:15' },
+    { id: 6, departureTime: '10:00', departurePlace: 'KLKV', route: 'KRKM', arrivalPlace: 'VLRD', arrivalTime: '10:40', km: 17.0, terminalGap: '00:10' },
+    { id: 7, departureTime: '10:50', departurePlace: 'VLRD', route: 'KRKM', arrivalPlace: 'KLKV', arrivalTime: '11:30', km: 17.0, terminalGap: '00:05' },
+    { id: 8, departureTime: '11:35', departurePlace: 'KLKV', route: 'NH', arrivalPlace: 'PSL', arrivalTime: '11:45', km: 3.5, terminalGap: '00:05' },
   ]);
 
   return (
     <div className="routes-container">
+      <div className="search-container"> 
+        <input type="text" className="search" placeholder="Search" />
+        <button className="generate-button">Regenerate</button>
+      </div>
       <h2>Trip 1</h2>
-      <input type="text" className="search" placeholder="Search" />
-      <button className="generate-button">Regenerate</button>
       <table className="routes-table">
         <thead>
           <tr>
@@ -52,7 +54,7 @@ const RoutesTable = () => {
         <div>Hours of Work: 8:35</div>
         <div>Total KM: 184.7</div>
         <div>Spread Over: 8:35</div>
-        <div>OverTime (OT): 0:35</div>
+        <div>OverTime: 0:35</div>
       </div>
     </div>
   );

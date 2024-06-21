@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBus, faUserTie, faClipboard, faCogs, faSignOutAlt, faRoad } from '@fortawesome/free-solid-svg-icons';
 import './SideMenu.css';
 
-function SideMenu({ onMenuClick }) {
+function SideMenu({ onMenuClick, onLogout }) {
   return (
     <div className="side-menu">
       <ul className="menu-list">
@@ -29,7 +29,7 @@ function SideMenu({ onMenuClick }) {
           <FontAwesomeIcon icon={faCogs} className="menu-icon" />
           <span>Settings</span>
         </li>
-        <li onClick={() => onMenuClick('Logout')}>
+        <li onClick={onLogout}>
           <FontAwesomeIcon icon={faSignOutAlt} className="menu-icon" />
           <span>Logout</span>
         </li>
