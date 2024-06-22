@@ -1,5 +1,4 @@
-/* App.css */
-
+ 
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -15,7 +14,7 @@ body {
 
 .main-layout {
   display: flex; /* Use flexbox for main layout */
-  flex: 1; /* Grow to fill available space */
+  /* Grow to fill available space */
 }
 
 .content {

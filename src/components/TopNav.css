@@ -1,60 +1,50 @@
-/* src/components/TopNav.css */
-
 .top-navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color:#FFFFFF;
-    border-bottom: 1px solid #D5D5D5;
-   
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #D5D5D5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+   /* Ensure it appears above other content */
+}
 
-  }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-    font-size: 24px;
-    font-weight: bold;
-    font-family: Poppins;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 24px;
-    letter-spacing: 0.02em;
-    text-align: left;
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Poppins;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+}
 
-  }
-  
-  .logo .bus-icon {
-    margin-left: 13px;
-    margin-right: 8px;
-    color: #b71c1c;
-    width: 46px;
-    height: 46px;
-  }
-  
-  .user-info {
-    font-family: Poppins;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.01em;
-    text-align: left;
-    width: Hug (104px)px;
-    height: Hug (36px)px;
-    top: 12px;
-    left: 1291px;
-    gap: 14px;
-    opacity: 0px;
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-  }
-  
-  .user-info .user-icon {
-    margin-left: 8px;
-    color: #f9f9f9;
-    background-color: #b71c1c;
-    border: 2px solid #b71c1c;
-    border-radius: 50%;
-    padding: 6px;
-  }
+.logo .bus-icon {
+  margin-left: 13px;
+  margin-right: 8px;
+  color: #b71c1c;
+  width: 46px;
+  height: 46px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  font-family: Poppins;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  font-size: 18px;
+}
+
+.user-info .user-icon {
+  margin-left: 8px;
+  color: #f9f9f9;
+  background-color: #b71c1c;
+  border: 2px solid #b71c1c;
+  border-radius: 50%;
+  padding: 6px;
+}

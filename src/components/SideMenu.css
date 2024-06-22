@@ -1,52 +1,97 @@
 .side-menu {
-    width: 250px; 
-    display: flex;
-    flex-direction: column;
-    background: #ffffff;
-    padding: 10px 0;
-    border-right: 1px solid #ddd;
-    box-shadow: 4px 0px 20px 0px #0000000d;
-  }
-  
- 
+  /* height: 650px; */
+  width: 230px; 
+  /* display: flex; */
+  flex-direction: column;
+  background: #ffffff;
+  padding: 10px 0;
+  border-right: 1px solid #ddd;
+  box-shadow: 4px 0px 20px 0px #0000000d;
+  /* position: fixed; */
+}
+
 .menu-list {
-        position: absolute; /* Position absolutely relative to the parent */
-        top: 82px; /* Distance from the top of the container */
-        left: 18px; /* Distance from the left of the container */
-        width: 220px; /* Width of the menu list */
-        height: 179px; /* Height of each menu item */
-        padding: 0; /* Remove default padding */
-        margin: 0; /* Remove default margin */
-        list-style-type: none; /* Remove default list styling */
-      }
-  
+  position: fixed;
+  top: 82px;
+  left: 18px;
+  width: 210px;
+  height: 179px;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
 .menu-list-bottom {
-    position: absolute; /* Position absolutely relative to the parent */
-    bottom: 20px; /* Distance from the bottom of the container */
-    left: 18px; /* Distance from the left of the container */
-    width: 220px; /* Width of the menu list */
-    height: 84px; /* Height of each menu item */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    list-style-type: none; /* Remove default list styling */
-  }
-.menu-list li, .menu-list-bottom li {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    color: #334D6E;
-  }
-  
-.menu-list li:hover, .menu-list-bottom li:hover {
-    background-color: #e9ecef;
-    opacity: 1;
-  }
-  
+  position: fixed;
+  bottom: 20px;
+  left: 18px;
+  width: 210px;
+  /* height: 84px; */
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.menu-list li,
+.menu-list-bottom li {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #334d6e;
+}
+
+.menu-list li:hover,
+.menu-list-bottom li:hover {
+  background-color: #e9ecef;
+  opacity: 1;
+}
+
 .menu-icon {
-    margin-right: 14px; /* Adjust margins as needed */
-    color: #6c757d;
-    min-width: 24px; /* Ensure icon container has minimum width */
+  margin-right: 14px;
+  color: #6c757d;
+  min-width: 24px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .side-menu {
+    width: 100%; /* Take full width */
+    border-right: none; /* No right border */
+    box-shadow: none; /* No shadow */
   }
-  
+
+  .menu-list,
+  .menu-list-bottom {
+    position: static; /* Remove absolute positioning */
+    width: 100%; /* Take full width */
+    margin: 60px 0; /* Add margin for spacing */
+  }
+
+  .menu-list li,
+  .menu-list-bottom li {
+    /* padding: 10px 20px; */
+
+    border-bottom: 1px solid #ddd; /* Add separation between items */
+  }
+
+  .menu-list li:last-child,
+  .menu-list-bottom li:last-child {
+    border-bottom: none;
+     /* Remove border from last item */
+  }
+
+  .menu-icon {
+    display: none; /* Hide icons by default */
+  }
+
+  /* Example: Show a menu toggle icon */
+  .menu-toggle {
+    display: block; /* Show toggle icon */
+    padding: 10px 20px;
+    background-color: #f8f9fa; /* Background color for toggle */
+    border: 1px solid #ddd; /* Border for toggle */
+    cursor: pointer;
+  }
+}
