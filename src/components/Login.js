@@ -9,9 +9,19 @@ function Login({ onLogin }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await onLogin(email, password);
+      const token = await onLogin(email, password);
+      localStorage.setItem('authToken', token);
     } catch (error) {
       setError('Login failed: ' + error.message);
+    }
+  };
+
+  const togglePasswordVisibility = (field) => {
+    const input = document.getElementById(field);
+    if (input.type === 'password') {
+      input.type = 'text';
+    } else {
+      input.type = 'password';
     }
   };
 
@@ -36,14 +46,12 @@ function Login({ onLogin }) {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
+            id="loginPassword"
           />
-        </div> 
-        <div className="forgot-password">
-          <button className="pass">
-            Forgot Password?
-          </button>
-          </div>
-
+          <span className="password-toggle" onClick={() => togglePasswordVisibility('loginPassword')}>
+            <i className="fas fa-eye"></i>
+          </span>
+        </div>
         <button type="submit">Login</button>
       </form>
     </div>

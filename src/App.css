@@ -14,12 +14,14 @@ body {
 
 .main-layout {
   display: flex; /* Use flexbox for main layout */
-  /* Grow to fill available space */
+  flex:1;/* Grow to fill available space */
 }
 
 .content {
+  border-left: 0.5px solid #ddd;
   flex: 1;
   padding: 20px;
   background-color: #f8f9fa; /* Example background color */
   text-align: left; /* Align content within the content area */
+  height: 100%; /* Ensure content area takes up full height */
 }

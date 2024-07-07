@@ -1,0 +1,80 @@
+.reset-password-form {
+    background-color: rgb(255, 255, 255);
+    padding: 60px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(88, 7, 7, 0.756);
+    width: 400px;
+    text-align: center;
+    max-width: 90%;
+    z-index: 1;
+    margin-top: 80px;
+    margin-left: 150px;
+    align-items: center;
+    /* position: fixed; */
+  }
+  
+  .reset-password-form h2 {
+    color: black;
+    font-family: Poppins;
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .reset-password-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .reset-password-form .form-group label {
+    color: black;
+    font-size: 15px;
+    display: block;
+    margin-bottom: 10px;
+    font-family: Poppins;
+  }
+  
+  .reset-password-form .form-group input {
+    width: calc(100% - 32px);
+    padding: 12px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    border: 1px solid #4b0808;
+    font-family: Poppins;
+    font-size: 15px;
+  }
+  
+  .reset-password-form .form-group .password-toggle {
+    position: absolute;
+    right: 50px;
+    top: 70%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  .reset-password-form .form-group .password-toggle i {
+    font-size: 18px;
+    color: #000000;
+  }
+  
+  .reset-password-form .form-group .password-toggle i:hover {
+    color: #50d70d;
+  }
+  
+  .reset-password-form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 15px;
+    background-color: #782828;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reset-password-form button:hover {
+    background-color: #280909;
+  }
+  

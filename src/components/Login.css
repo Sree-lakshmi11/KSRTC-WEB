@@ -1,93 +1,110 @@
-
-
 .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color:  #aea1a15c;
-    /* Background color */
-    position: relative; /* Ensure relative positioning for absolute overlay */
-  }
-  
-  
-  .login-form {
-    background-color: rgba(121, 69, 69, 0.664); /* Semi-transparent background */
-    padding: 20px;
-    border-radius: 25px;
-    box-shadow: 0 0 20px rgba(77, 73, 73, 0.756); /* Soft shadow effect */
-    width: 400px;
-    text-align: center;
-    max-width: 90%; /* Ensure form doesn't overflow on smaller screens */
-    z-index: 1; /* Ensure form is above overlay */
-  }
-  
-  .login-form h2 {
-    font-family: Poppins;
-    font-size: 30px;
-    margin-bottom: 40px; /* Adjust as needed */
-    text-align: center;
-  }
-  
-  .form-group {
-    font-size: 20px;
-    font-weight: 300px;
-    margin-bottom: 20px; /* Increased margin for spacing */
-    text-align: left;
-  }
-  
-  .form-group label {
-    font-family: Poppins;
-    display: block;
-    margin-bottom: 10px;
-  }
-  
-  .form-group input {
-    font-family: Poppins;
-    width: 100%;
-    padding: 12px; /* Increased padding for better input visibility */
-    box-sizing: border-box;
-    border-radius: 15px;
-    border: 1px solid #ccc; /* Light border */
-  }
-  
-  .login-form button {
-    font-family: Poppins;
-    width: 100%;
-    padding: 12px;
-    margin-top: 20px; /* Increased top margin for spacing */
-    background-color: #633636;
-    color: white;
-    border: none;
-    border-radius: 15px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .login-form button:hover {
-    background-color: #280909;
-  }
-  
-  .forgot-password {
-    text-align: right;
-    margin-top: 10px; /* Optional: Adjust spacing as needed */
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1f0f0;
+  position: relative;
+}
 
-  .forgot-password button {
-    background: none;
-    border: none;
-    color: #471313; /* Adjust color as needed */
-    font-family: Poppins;
-    font-size: 16px; /* Adjust font size if necessary */
-    text-decoration: underline;
-    cursor: pointer;
-     
-  }
-  
-  .forgot-password button:hover {
-    color: #180303; /* Darker color on hover */
-    text-decoration: none; 
-    background: none;/* Remove underline on hover */
-  }
-  
-  
+.login-form {
+  background-color: rgb(140, 63, 63);
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.756);
+  width: 400px;
+  text-align: center;
+  max-width: 90%;
+  z-index: 1;
+  position: relative; /* Ensure it stacks correctly */
+}
+
+.login-form h2 {
+  font-family: Poppins;
+  color: white;
+  font-size: 25px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.form-group {
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  position: relative; /* Ensure positioning for password toggle */
+  text-align: left;
+}
+
+.form-group label {
+  font-family: Poppins;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  font-family: Poppins;
+  width: 100%;
+  padding: 14px;
+  box-sizing: border-box;
+  border-radius: 18px;
+  border: 1px solid #ffffff;
+}
+
+.form-group .password-toggle {
+  position: absolute;
+  right: 20px;
+  top: 70%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.form-group .password-toggle i {
+  font-size: 18px;
+  color: #1b0404;
+}
+
+.form-group .password-toggle i:hover {
+  color: #ffffff;
+}
+
+.login-form button {
+  font-size: 18px;
+  font-family: Poppins;
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  background-color: #5c1717;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+  background-color: #3f0808;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-top: 8px;
+}
+
+.forgot-password button {
+  background: none;
+  border: none;
+  color: #b2afaf;
+  font-family: Poppins;
+  font-size: 16px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.forgot-password button:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background: none;
+}
+
+ 

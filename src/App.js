@@ -1,10 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import './App.css';
 import TopNav from './components/TopNav';
 import Login from './components/Login';
 import SideMenu from './components/SideMenu';
 import RoutesTable from './components/RoutesTable';
+import Routes from './components/Routes';
+import Employees from './components/Employees';
+import Vehicles from './components/Vehicles';
+import ResetPassword from './components/resetpass';
+import axios from 'axios';
+
+import { login, logout } from './auth';
 
 function App() {
   const [activePage, setActivePage] = useState('');
@@ -21,48 +27,19 @@ function App() {
   };
 
   const handleLogin = async (email, password) => {
-    try {
-      const response = await axios.post('https://getmevimal1442.pythonanywhere.com/api/auth/login/', {
-        email,
-        password
-      }, {
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-
-      if (response.status === 200) {
-        setIsLoggedIn(true);
-        setAuthToken(response.data.token); // Store the token
-        localStorage.setItem('authToken', response.data.token); // Persist the token
-      } else {
-        alert('Invalid email or password');
-      }
-    } catch (error) {
-      alert('Login failed: ' + error.message);
+    const token = await login(email, password);
+    if (token) {
+      setIsLoggedIn(true);
+      setAuthToken(token);
     }
   };
 
   const handleLogout = async () => {
-    try {
-      const response = await axios.post('https://getmevimal1442.pythonanywhere.com/api/auth/logout/', {}, {
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Token ${authToken}` // Include the token in the logout request
-        }
-      });
-      console.log('Logout response:', response); 
-      if (response.status === 200) {
-        setIsLoggedIn(false);
-        setAuthToken(null);
-        setActivePage(''); // Reset the active page on logout
-        localStorage.removeItem('authToken'); // Remove the token from localStorage
-      } else {
-        alert('Logout failed');
-      }
-    } catch (error) {
-      console.error('Logout failed:', error); // Log the error
-      alert('Logout failed: ' + error.message);
+    const success = await logout(authToken);
+    if (success) {
+      setIsLoggedIn(false);
+      setAuthToken(null);
+      setActivePage(''); // Reset the active page on logout
     }
   };
 
@@ -92,7 +69,10 @@ function App() {
             <SideMenu onMenuClick={handleMenuClick} onLogout={handleLogout} />
             <div className="content">
               {activePage === 'Schedule' && <RoutesTable />}
-              {/* Add more conditional renders for other pages if necessary */}
+              {activePage === 'Depo Routes' && <Routes />}
+              {activePage === 'Employees' && <Employees />}
+              {activePage === 'Vehicles' && <Vehicles />}
+              {activePage === 'Settings' && <ResetPassword />}
             </div>
           </div>
         </>

@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .search-container {
+    margin-bottom: 20px;
+  }
+  
+  .search-vehicle {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .vehicles-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 8px; /* Adjust spacing between rows */
+    margin-bottom: 20px;
+  }
+  
+  .vehicles-table th, .vehicles-table td {
+    padding: 8px;
+    text-align: left;
+    background-color: white;
+  }
+  
+  .vehicles-table th {
+    background-color: #eaeaea; /* Changed background color */
+    font-weight: bold;
+  }
+
+  
+  .action-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #b21e1e;
+  }
+  
+  .action-button:hover {
+    color: #962020;
+  }
+  
+  .unfit {
+    color: rgb(156, 22, 22);
+}
+
+  .fit {
+    color: rgb(38, 160, 38);
+}

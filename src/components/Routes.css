@@ -1,0 +1,88 @@
+.routestable {
+  width: 100%;
+  border-collapse: separate;
+  -spacing: 8px;
+  /* Adjust spacing between rows */
+  margin-bottom: 20px;
+}
+
+.routestable th, .routestable td {
+ 
+  padding: 15px;
+  text-align: left;
+  background-color: white;
+}
+
+.routestable th {
+  background-color: #eaeaea; /* Changed background color */
+  font-weight: bold;
+}
+
+.bottom-buttons {
+   
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.bottom-button {
+  background-color:  #a22828;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 0 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.bottom-button:hover {
+  background-color:  #841f1f;
+
+}
+
+.bottom-button svg {
+  margin-right: 5px;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  color: #ff0000;
+  cursor: pointer;
+  padding: 0;
+}
+.add-leg-row {
+background-color: #ffffff;
+}
+
+.add-leg-row td {
+padding: 10px;
+}
+
+.add-leg-row input {
+width: 40%;
+padding: 8px;
+font-size: 16px;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+.add-leg-row button {
+padding: 10px 20px;
+margin-left:10px ;
+margin-top: 3px;
+font-size: 16px;
+border: none;
+border-radius: 4px;
+background-color: #5b1313;
+color: #fff;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.add-leg-row button:hover {
+background-color: #320606;
+}
